@@ -1,9 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <router-link to="/">
+        <img alt="Vue logo" src="./assets/logo.png" width="100" height="50"/>
+      </router-link>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <router-link to="/">Home</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/about">About</router-link>
+          </li>
+         
+        </ul>
+      </div>
+    </nav>
+
     <router-view />
   </div>
 </template>
@@ -16,7 +33,10 @@
   text-align: center;
   color: #2c3e50;
 }
-
+#img {
+  width:200;
+  height: 250;
+}
 #nav {
   padding: 30px;
 }
